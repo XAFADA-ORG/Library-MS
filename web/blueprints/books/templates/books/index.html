@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Books
+{% endblock %}
+
+{% block content %}
+
+
+    <button type="button" class="btn btn-dark m" data-bs-toggle="modal" data-bs-target="#bookModal">
+        Create
+    </button>
+    
+    <button type="button" class="btn btn-dark m" data-bs-toggle="modal" data-bs-target="#returnBookModal">
+        Return
+    </button>
+
+    {% include 'import-books-frappe.html' %}
+
+
+<table id="books" class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>Books ID</th>
+                <th>Name</th>
+                <th>ISBN</th>
+                <th>Author</th>
+                <th>Stock</th>
+                <th>Action</th>
+        <thead>
+    </table>
+{% endblock %}
